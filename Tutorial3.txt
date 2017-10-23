@@ -1,0 +1,64 @@
+Lets build a form
+
+form.html or .jsp
+<form action = "student-response.jsp">
+
+First Name:
+<input type = "text" name = "firstName" />
+
+Last Name:
+<input type = "text" name = "lastName" />
+
+<input type = "Submit" value = "submit" />
+</form>
+
+student-response.jsp
+
+You entered ${param.firstName} ${param.lastName} 
+
+
+
+let's add more stuff to the form
+
+Let's add drop down list
+Add this to html page
+
+I am from 
+<select = "state">
+<option>California</option>
+<option>Nevada</option>
+<option>Idaho</option>
+<option>Wisconsin</option>
+</select>
+
+now, add this to student-response.jsp
+You are from ${param.state}
+
+Let's say you want to add radio button option
+You need to add this to html page
+
+<input type = "radio" name = "favLang" value = "Java"> Java
+<input type = "radio" name = "favLang" value = "Javascript"> Javascript
+<input type = "radio" name = "favLang" value = "PHP"> PHP
+<input type = "radio" name = "favLang" value = "C++"> C++
+<input type = "radio" name = "favLang" value = "Python"> Python
+
+Let's go back to student-response.jsp and add this
+Your favorite programming language is ${param.favLang}
+
+Now, checkbox html and jsp is interesting and different because you can choose multiple options with checkbox vs radio button
+
+<input type = "checkBox" name = "clubsInvolved" value = "Chess"> Chess
+<input type = "checkBox" name = "clubsInvolved" value = "Hiking"> Hiking
+<input type = "checkBox" name = "clubsInvolved" value = "Language and Culture"> Language and Culture
+<input type = "checkBox" name = "clubsInvolved" value = "Tutoring"> Tutoring
+
+Now let's add this to student - request.jsp
+<ul>
+<% 
+  String[] clubs=request.getParameterValue("clubsInvolved");
+  for (String tempClubs:clubsInvolved){
+  out.printIn("<li>" + clubs + "</li>");
+  }
+  %>
+  </ul>

@@ -1,0 +1,21 @@
+Templates
+
+my-header.html
+<h1 align = "center">  Template Heading </h1>
+
+
+footer.jsp
+<p align = "center">
+last visit <%= new java.util.Date() %>
+</p>
+
+
+index.jsp
+<html>
+<body>
+<jsp: include page = "my-header.html" />
+<h3> this is the body of the page </h3>
+<p>I am JSP programmer </p>
+<jsp:include page = "my-footer.jsp">
+</body>
+</html>

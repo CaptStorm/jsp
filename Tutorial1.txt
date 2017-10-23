@@ -1,0 +1,24 @@
+//create a regular html page 
+
+this is jsp expression
+the synthax for jsp expression is <%= %>
+
+example
+<%= new String ("Hello from my world").toUpperCase() %>
+once you run the html page or .jsp
+
+regular mathematic problem
+<%= 34 / 2 %>
+
+boolean
+<%= 75<90 %>
+you should get true because 75 is less than 90
+
+for loop
+<%
+  for (int i=1; i<=5; i++){
+  out.printIn("<br/> I love coding </br>" + i);
+  }
+%>
+you should see I love coding: 1 through 5, 5 times
+

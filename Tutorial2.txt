@@ -1,0 +1,11 @@
+
+scriplet-test.jsp
+<%!
+  String makeItLower(String data) {
+    return data.toLowerCase();
+ }
+ %>
+ 
+<p>
+<%= makeItLower("Hello World") %>
+</p>
